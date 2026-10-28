@@ -1,0 +1,71 @@
+{
+  "category": "Commercial Solar Installation",
+  "version": 1,
+  "project": "150 kW rooftop system on a warehouse in Windsor, Ontario",
+  "criteria": [
+    {
+      "id": "licence",
+      "name": "Ontario electrical contractor licence",
+      "type": "mandatory",
+      "looking_for": "Licence held by the bidder and stated in the proposal"
+    },
+    {
+      "id": "insurance",
+      "name": "WSIB clearance and $5M liability insurance",
+      "type": "mandatory",
+      "looking_for": "Both confirmed in the proposal"
+    },
+    {
+      "id": "experience",
+      "name": "Relevant experience",
+      "type": "weighted",
+      "weight": 30,
+      "method": "points_per_count",
+      "points_per": 7,
+      "cap": 100,
+      "looking_for": "Commercial installs of 100 kW or more in the last 5 years"
+    },
+    {
+      "id": "price",
+      "name": "Price",
+      "type": "weighted",
+      "weight": 25,
+      "method": "lower_is_better_between",
+      "full_marks_at": 182000,
+      "zero_at": 260000,
+      "looking_for": "Lower total cost within the budget ceiling"
+    },
+    {
+      "id": "timeline",
+      "name": "Timeline",
+      "type": "weighted",
+      "weight": 15,
+      "method": "shorter_weeks_steps",
+      "full_marks_at_or_below": 10,
+      "zero_above": 16,
+      "drop_per_week_after_full_marks": 15,
+      "looking_for": "Shorter completion time within 16 weeks"
+    },
+    {
+      "id": "warranty",
+      "name": "Warranty",
+      "type": "weighted",
+      "weight": 15,
+      "method": "two_part_years",
+      "parts": [
+        { "field": "panel_warranty_years", "full_marks_years": 25, "points": 50 },
+        { "field": "workmanship_warranty_years", "full_marks_years": 15, "points": 50 }
+      ],
+      "looking_for": "Length of panel and workmanship warranties"
+    },
+    {
+      "id": "team",
+      "name": "Team and approach",
+      "type": "weighted",
+      "weight": 15,
+      "method": "checklist",
+      "items": ["named_lead", "crew", "safety_plan", "monitoring_plan"],
+      "looking_for": "Named project lead, crew, safety and monitoring plan"
+    }
+  ]
+}
